@@ -8,7 +8,7 @@ public class Main {
     int b = 4;
     int c = 8;
     int d = 16;
-	System.out.println("a * (b + (c / d)) =" + task1(a, b, c, d)); //результат 8
+	System.out.println("a * (b + (c / d)) = " + task1(a, b, c, d)); //результат 8
 
 
     }
