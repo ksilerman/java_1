@@ -1,5 +1,5 @@
 package java_1;
-
+//это оригинал
 public class Main {
 
     public static void main(String[] args)
