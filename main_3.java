@@ -1,29 +1,48 @@
+/*
+Java. level 1. Lesson 3. Example of homework
+autor Rudenko Alexander
+version date 29/11/2018
+*/
 import java.util.Scanner;
 import java.util.Random;
 public class java_3 {
 
-    public static Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
 
+        int da = 0;
 
-    public static void main (String[] args) {
-int da = 1;
-int net = da;
-        System.out.println("Угадайте число в пределах от 0 до 10");
-        Random rand = new Random();
-        int x = rand.nextInt(10);
-        do {
-            for (int i = 0; i <= 2; i++) {
-                int a = scan.nextInt();
-                if (a == x) {
+        while (da == 0) {        // выполнять пока 0
+            int UserNumber = 0;  // число водимое пользователем
+            int sluch = 0;       // случайное число
+            int i = 0;           // счетчик
+            int DaN;             // выбор: продолжить или нет
+
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Угадайте число в пределах от 0 до 10");
+            Random rand = new Random();
+            sluch = rand.nextInt(10);
+            System.out.println("Введите число у вас 3 попытки");
+            while (i < 3) {
+                UserNumber = scan.nextInt();
+                if (UserNumber == sluch) {
                     System.out.println("Угадали");
-                    
-                } else if (a > x) {
-                    System.out.println("Число меньше");
-                } else {
+                    i = 3;
+                } else if (UserNumber < sluch) {
                     System.out.println("Число больше");
+                    i++;
+                } else if (UserNumber > sluch) {
+                    System.out.println("Число меньше");
+                    i++;
                 }
             }
-        }  while (net == 0);
+
+            System.out.println("Продолжить игру? 1 - да, 0 - нет");
+            DaN = scan.nextInt();
+            if (DaN == 1) {
+                da = 0;
+            } else {
+                da = 1;
+            }
+        }
     }
 }
-
