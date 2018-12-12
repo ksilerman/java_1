@@ -56,7 +56,6 @@ public class java_7 {
         Cat(String name, int appetite) {
             this.name = name;
             this.appetite = appetite;
-            this.satiety = satiety;
         }
 
         public int getAppetite() {
